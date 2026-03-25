@@ -1,0 +1,18 @@
+def alphabeta(node,depth,alpha,beta,maximizing):
+    if depth==0: return node
+    if maximizing:
+        v=-999
+        for n in node:
+            v=max(v,alphabeta(n,depth-1,alpha,beta,False))
+            alpha=max(alpha,v)
+            if beta<=alpha: break
+        return v
+    else:
+        v=999
+        for n in node:
+            v=min(v,alphabeta(n,depth-1,alpha,beta,True))
+            beta=min(beta,v)
+            if beta<=alpha: break
+        return v
+tree=[[3,5],[6,9]]
+print(alphabeta(tree,2,-999,999,True))
