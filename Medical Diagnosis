@@ -1,0 +1,2 @@
+symptom(fever).
+disease(flu):- symptom(fever).
