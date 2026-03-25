@@ -1,0 +1,10 @@
+graph = {'A':['B','C'],'B':['D'],'C':[],'D':[]}
+
+def bfs(start):
+    queue=[start]
+    while queue:
+        n=queue.pop(0)
+        print(n,end=" ")
+        queue += graph[n]
+
+bfs('A')
