@@ -1,0 +1,9 @@
+colors = ["Red","Green","Blue"]
+regions = ["A","B","C"]
+
+for a in colors:
+    for b in colors:
+        for c in colors:
+            if a!=b and b!=c and a!=c:
+                print("A:",a,"B:",b,"C:",c)
+                break
