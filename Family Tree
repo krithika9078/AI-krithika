@@ -1,0 +1,4 @@
+parent(ram, sita).
+parent(sita, gita).
+
+grandparent(X,Y):- parent(X,Z), parent(Z,Y).
